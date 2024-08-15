@@ -8,4 +8,3 @@ for (let j = 1; j <=10; j++){
     }
     console.log('----------------------')
 }
-//hola este es un nuevo commit
