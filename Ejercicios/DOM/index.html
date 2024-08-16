@@ -9,37 +9,63 @@
         background-color: #252525;
         color: white;
         margin: 5rem;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        margin-bottom: 2rem;
       }
       .parrafo {
         font-size: 35px;
-        color: yellow;
+        color: rgb(190, 17, 164);
         font-weight: bold;
+        padding: 1rem;
+        background-color: #333;
+        border-radius: 1rem;     
       }
       button {
-        padding: 2rem;
+        padding: 1rem 2rem;
         cursor: pointer;
         font-size: 20px;
         border-radius: 1rem;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        transition: background-color 0.3s, transform 0.3s;
+        margin-top: 2rem;
+      }
+      button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+      button:active {
+        background-color: #004494;
+        transform: scale(1);
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Manipulación del DOM con JS</h1>
-      <p id="miParrafo" class="parrafo">Texto original</p>
+      <h1>Bienvenidos a KeyCode</h1>
+      <p id="miParrafo" class="parrafo">Welcome</p>
     </header>
     <section>
-      <button id="btn" onclick="handleCLic">Haz clic aqui</button>
+      <button id="btn">Aprenderás</button>
     </section>
 
     <script>
       const btn = document.getElementById("btn");
       const parrafo = document.getElementById("miParrafo");
-      const texto = "Texto nuevo";
+      const texto = ["JS", "React", "y mucho más..."];
+      let cont = 0;
 
       btn.addEventListener("click", () => {
-        parrafo.textContent = texto;
-        parrafo.style.color = "red";
+        parrafo.textContent = texto[cont];
+        parrafo.style.color = "yellow";
+        parrafo.style.backgroundColor = "#444";
+        cont = (cont + 1) % texto.length;
       });
     </script>
   </body>
