@@ -1,0 +1,63 @@
+/* Estilos generales para el contenedor principal */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #1a1a1a; /* Fondo negro */
+  color: #ff8c00; /* Texto naranja */
+}
+
+/* Estilos para el logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #32cd32aa); /* Sombra verde viche al hacer hover */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #ff4500aa); /* Sombra naranja rojizo para el logo de React */
+}
+
+/* Animación de rotación del logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aplicar animación solo si no hay preferencia de reducción de movimiento */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Estilos para las tarjetas */
+.card {
+  padding: 2em;
+  background-color: #2a2a2a; /* Fondo ligeramente más claro que el principal */
+  border: 2px solid #32cd32; /* Borde verde viche */
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+/* Estilos para el texto de documentación */
+.read-the-docs {
+  color: #ff8c00; /* Naranja para mayor visibilidad */
+  font-style: italic;
+}
+
+/* Estilos para el contador */
+.contador {
+  font-size: 50px;
+  font-weight: bold;
+  color: #32cd32; /* Verde viche para el contador */
+  text-shadow: 2px 2px 4px #000000; /* Sombra negra para mejor contraste */
+}
